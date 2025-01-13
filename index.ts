@@ -1,7 +1,7 @@
 import { integrateBackend } from './backend/server.ts';
 import { createServer } from 'node:http';
 import express from 'express';
-import { handler } from './build/build/handler.js';
+import { handler } from './build/handler.js';
 
 const app = express();
 const server = createServer(app);
