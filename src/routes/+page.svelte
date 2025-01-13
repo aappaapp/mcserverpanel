@@ -39,6 +39,10 @@
 			socketConnected = true;
 		});
 
+		socket.on('disconnect', () => {
+			socketConnected = false;
+		});
+
 		socket.on('console-output', ({ id, data }) => {
 			switch (id) {
 				case 'bash':
