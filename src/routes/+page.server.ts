@@ -11,7 +11,8 @@ export async function load({ request }) {
 	return {
 		filebrowserUrl: (() => {
 			const url = new URL(request.url);
-			return `${url.protocol}//${url.hostname}:31428`;
+			console.log('url', url);
+			return `http://${url.hostname}:8081`;
 		})()
 	};
 }

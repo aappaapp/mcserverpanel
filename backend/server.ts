@@ -10,7 +10,7 @@ export async function integrateBackend(server: import('http').Server) {
 	const bash: IPty = spawnPty('bash', [], {
 		cwd: './mc/'
 	});
-	const filebrowser = spawnPty('filebrowser', ['--port', '31428'], {
+	const filebrowser = spawnPty('filebrowser', ['-a', '0.0.0.0', '-p', '8081'], {
 		cwd: './mc/'
 	});
 
